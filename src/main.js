@@ -6,6 +6,11 @@ import router from './router'
 
 Vue.config.productionTip = false
 
+// 全局过滤器
+Object.keys(filters).forEach(filterName => {
+  Vue.filter(filterName, filters[filterName])
+})
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
