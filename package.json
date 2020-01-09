@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "axios": "^0.19.1",
+    "dayjs": "^1.8.19",
     "qs": "^6.9.1",
     "sass-resources-loader": "^2.0.1",
     "vue": "^2.5.2",
