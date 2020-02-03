@@ -10,12 +10,13 @@
       getters
       <span style="color: red;">{{doubleCount}}</span>
     </h5>
+    <button @click="delayAdd">延迟增加</button>
   </div>
 </template>
 
 <script>
 import { testHome } from '@/api/common'
-import { mapState, mapMutations, mapGetters } from 'vuex'
+import { mapState, mapMutations, mapGetters, mapActions } from 'vuex'
 export default {
   computed: {
     ...mapState({
@@ -41,7 +42,8 @@ export default {
       const res = await testHome(params)
       this.listData = res.list
     },
-    ...mapMutations(['add'])
+    ...mapMutations(['add']),
+    ...mapActions(['delayAdd'])
   },
   created() {
     this.getData()
